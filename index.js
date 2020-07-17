@@ -344,7 +344,7 @@ function getHTML(/* Code here */){
 
 const artistsRandom = [...artists];
 function randomize(arr){
-  list = artistsRandom.sort(() => Math.random() - 0.5)
+  list = artistsRandom.sort(() => Math.random() - 0.5);
   return artistsRandom;
   }
 
