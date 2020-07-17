@@ -134,3 +134,13 @@ button:hover{
 .artist img{
     width:100%;
 }
+
+/* Media for Stretch */
+@media(max-width:800px){
+    
+}
+
+/* Media */
+@media(max-width:500px){
+
+}
