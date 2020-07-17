@@ -260,13 +260,13 @@ console.log(get20s(artists));
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
+const artists2 = [...artists];
 function removeArtist(arr, i) {
     arr.splice(i, 1);
     return arr.length;
   }
   
-console.log(removeArtist(artists, 0));
-console.log(artists);
+console.log(removeArtist(artists2, 0));
  
 
 /**
@@ -288,7 +288,6 @@ function addArtist(arr, id, name, years, genre, nationality, bio){
   }
 
 console.log(addArtist(artists, 20, 'Chris Corbin', '1981-2020', 'WEB34', 'Caucasian', 'Chris Corbin (22 October 1981 - 17 July 2020) was a former IT Specialist, but now studying to become a Web Developer. He is super awful at painting but is on this list anyways.'));
-console.log(artists);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
