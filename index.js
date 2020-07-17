@@ -260,10 +260,13 @@ console.log(get20s(artists));
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(/*code here*/) {
-    /* code here */
+function removeArtist(arr, i) {
+    arr.splice(i, 1);
+    return arr.length;
   }
   
+console.log(removeArtist(artists, 0));
+console.log(artists);
  
 
 /**
@@ -279,11 +282,13 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addArtist(arr, id, name, years, genre, nationality, bio){
+  arr.push({id, name, years, genre, nationality, bio});
+  return arr;
   }
+
+console.log(addArtist(artists, 20, 'Chris Corbin', '1981-2020', 'WEB34', 'Caucasian', 'Chris Corbin (22 October 1981 - 17 July 2020) was a former IT Specialist, but now studying to become a Web Developer. He is super awful at painting but is on this list anyways.'));
+console.log(artists);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -293,12 +298,17 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+function lotsOfArt(arr){
+let paintCount = [];
+for (let i = 0; i < arr.length; i++){
+  if (arr[i].paintings > 100){
+    paintCount.push(arr[i].name);
+  }
+}
+return paintCount;
 }
 
+console.log(lotsOfArt(artists));
 
 
 // 🎨🎨 STRETCH 🎨🎨//
